@@ -6,6 +6,7 @@ const mongoose = require("mongoose")
 const _ = require("lodash");
 
 const app = express();
+const PORT = process.env.PORT || 3000;
  
 app.set('view engine', 'ejs');
 
@@ -21,6 +22,7 @@ async function main() {
   await mongoose.connect(uri);
 
   console.log('Connected');
+  console.log('Check here');
 
   const itemsSchema = new mongoose.Schema({
     name: String
